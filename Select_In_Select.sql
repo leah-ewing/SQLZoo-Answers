@@ -38,7 +38,7 @@ SELECT name, population FROM world
 -- 5. Show the name and the population of each country in Europe. Show the population as a percentage of the population of Germany.
         -- The format should be Name, Percentage
 
-SELECT name, CONCAT(ROUND(population/(SELECT population FROM world WHERE name = 'Germany')*100, 0), '%')  FROM world
+SELECT name, CONCAT(ROUND(population/(SELECT population FROM world WHERE name = 'Germany')*100, 0), '%') FROM world
     WHERE continent = 'Europe';
 
 
